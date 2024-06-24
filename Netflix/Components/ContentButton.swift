@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct ContentButton: View {
+    let content: Content
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationLink(destination: DetailView()) {
+            ZStack {
+                Image(content.rawValue)
+                    .resizable()
+                    .scaledToFill()
+                
+                if content.orginal {
+                    Image("Logo")
+                        .resizable()
+                        .scaleEffect(0.1)
+                        .position(x: 16, y: 32)
+                }
+            }
+        }
+        .frame(width: 150, height: 200)
+        .buttonStyle(.plain)
+        .clipShape(.rect(cornerRadius: 8))
     }
 }
 
 #Preview {
-    ContentButton()
+    ContentButton(content: Content.formula1)
 }

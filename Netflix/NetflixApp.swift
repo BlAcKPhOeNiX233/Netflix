@@ -11,7 +11,7 @@ import SwiftUI
 struct NetflixApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ProfilesViews()
         }
 
         ImmersiveSpace(id: "ImmersiveSpace") {

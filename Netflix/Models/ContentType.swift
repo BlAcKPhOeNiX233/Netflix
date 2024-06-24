@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+enum ContentType: String {
+    case film = "Film"
+    case tvSerie = "TV Serie"
+}

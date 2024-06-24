@@ -1,5 +1,5 @@
 //
-//  Profiles.swift
+//  Profile.swift
 //  Netflix
 //
 //  Created by Bryan Sánchez Peralta on 22/02/24.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Profiles: String, CaseIterable, Identifiable {
+enum Profile: String, CaseIterable, Identifiable {
     var id: Self { self }
     
     case bryan = "Bryan"
